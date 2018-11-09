@@ -1,0 +1,21 @@
+<!--pages/detail/detail.wxml-->
+<scroll-view 
+scroll-y
+bindscrolltolower="tolower"
+bindscrolltoupper="refresh"
+class="scroll-list"
+lower-threshold="100"
+>
+  <block wx:for="{{list}}" wx:key="{{item.id}}">
+    <navigator url="../detailitem/detailitem?id={{item.id}}">
+      <view class="content-item">
+        <image src="{{item.img}}"></image>
+        <text class="content-item-text">{{item.desc}}</text>
+        <text class="content-item-prices">￥{{item.pirces}}</text>
+      </view>
+    </navigator>
+  </block>
+  <view wx:if="{{page === total}}">
+    <text>没有了哦</text>
+  </view>
+</scroll-view>

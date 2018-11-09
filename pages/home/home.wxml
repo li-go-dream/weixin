@@ -1,0 +1,89 @@
+<!--pages/home/home.wxml-->
+<scroll-view scroll-y class='content'>
+  <view class="page">
+      <view class="page__bd">
+          <view class="weui-search-bar">
+              <view class="weui-search-bar__form">
+                  <view class="weui-search-bar__box">
+                      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                      <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                      <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                          <icon type="clear" size="14"></icon>
+                      </view>
+                  </view>
+                  <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                      <icon class="weui-icon-search" type="search" size="14"></icon>
+                      <view class="weui-search-bar__text">搜索</view>
+                  </label>
+              </view>
+              <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+          </view>
+      </view>
+  </view>
+  <view class="swiper-f">
+    <swiper indicator-dots autoplay circular interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="page">
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+          <block wx:for="{{imgNavs}}">
+            <view class="weui-flex__item">
+              <view class="placeholder">
+                <image src="{{item.path}}"/>
+                <view class="span">{{item.text}}</view>  
+              </view>
+            </view> 
+          </block>
+        </view>
+    </view>
+  </view>
+  <view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                  <block wx:for="{{Man}}" wx:key="*this">
+                    <view class="content-item">
+                      <image src="{{item.path}}"></image>
+                      <view class="name">{{item.name}}</view>
+                      <view class="price">￥{{item.prices}}</view>
+                    </view>
+                  </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                  <block wx:for="{{Woman}}" wx:key="*this">
+                    <view class="content-item">
+                      <image src="{{item.path}}"></image>
+                      <view class="name">{{item.name}}</view>
+                      <view class="price">￥{{item.prices}}</view>
+                    </view>
+                  </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                  <block wx:for="{{Children}}" wx:key="*this">
+                    <view class="content-item">
+                      <image src="{{item.path}}"></image>
+                      <view class="name">{{item.name}}</view>
+                      <view class="price">￥{{item.prices}}</view>
+                    </view>
+                  </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+</scroll-view>

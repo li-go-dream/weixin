@@ -1,0 +1,72 @@
+/* pages/mine/mine.wxss */
+/* pages/mine/mine.wxss */
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0099CC;
+  height:370rpx
+}
+.userInfo button{
+  margin: auto
+}
+.userAvatar {
+  overflow:hidden;  
+  display: block;  
+  width: 160rpx;  
+  height: 160rpx;  
+  margin: 20rpx;  
+  margin-top: 50rpx;  
+  border-radius: 50%;  
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+}
+.userName-wrap {
+  margin-top: 30rpx;
+  font-size: 35rpx;
+}
+.userName {
+  color: #FF5687;
+}
+.order{
+  height: 80rpx;
+  display: flex;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  padding: 0 10rpx;
+  color: black;
+  justify-content: space-between;
+  border-bottom: 1px solid #cccccc;
+}
+.order-item{
+  color: rgb(117, 114, 114);
+}
+.png{
+  display: flex;
+  justify-content: space-around;
+  height: 160rpx;
+  border-bottom: 1px solid #cccccc;
+}
+.png .png-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.png .png-item text{
+  color: rgb(49, 47, 47);
+  font-size: 30rpx;
+}
+.png image{
+  width: 40%;
+  height: 30%;
+}
+.my-item{
+  height: 80rpx;
+   font-size: 30rpx;
+  line-height: 80rpx;
+  padding: 0 10rpx;
+  color: black;
+  border-bottom: 1px solid #cccccc;
+  
+}

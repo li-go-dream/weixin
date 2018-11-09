@@ -1,0 +1,107 @@
+<!--pages/mall/mall.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+              <block wx:for="{{tabs}}" wx:key="*this">
+                  <view id="{{item.id}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                      <view class="weui-navbar__title">{{item.text}}</view>
+                  </view>
+              </block>
+              <view class="weui-navbar__slider" style="top: {{sliderTop}}px; transform: translateY({{sliderOffset}}px); -webkit-transform: translateY({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 10366}}">
+                  <block wx:for="{{recommended}}" wx:key="item.id">
+                  <navigator url="../detail/detail?title={{item.TypeName}}">
+                    <view class="content-item">
+                      <image src="{{item.Logo}}"></image>
+                      <text class="content-item-text">{{item.TypeName}}</text>
+                    </view>
+                  </navigator>
+                  </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 10146}}">
+                  <block wx:for="{{recommended}}" wx:key="item.id">
+                    <navigator url="../detail/detail?title={{item.TypeName}}">
+                    <view class="content-item">
+                      <image src="{{item.Logo}}"></image>
+                      <text class="content-item-text">{{item.TypeName}}</text>
+                    </view>
+                  </navigator>
+                  </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 10145}}">
+                  <block wx:for="{{recommended}}" wx:key="item.id">
+                    <navigator url="../detail/detail?title={{item.TypeName}}">
+                    <view class="content-item">
+                      <image src="{{item.Logo}}"></image>
+                      <text class="content-item-text">{{item.TypeName}}</text>
+                    </view>
+                  </navigator>
+                  </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 10421}}">
+                  <block wx:for="{{recommended}}" wx:key="item.id">
+                    <navigator url="../detail/detail?title={{item.TypeName}}">
+                    <view class="content-item">
+                      <image src="{{item.Logo}}"></image>
+                      <text class="content-item-text">{{item.TypeName}}</text>
+                    </view>
+                  </navigator>
+                  </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 10426}}">
+                  <block wx:for="{{recommended}}" wx:key="item.id">
+                    <navigator url="../detail/detail?title={{item.TypeName}}">
+                    <view class="content-item">
+                      <image src="{{item.Logo}}"></image>
+                      <text class="content-item-text">{{item.TypeName}}</text>
+                    </view>
+                  </navigator>
+                  </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 10151}}">
+                  <block wx:for="{{recommended}}" wx:key="item.id">
+                    <navigator url="../detail/detail?title={{item.TypeName}}">
+                    <view class="content-item">
+                      <image src="{{item.Logo}}"></image>
+                      <text class="content-item-text">{{item.TypeName}}</text>
+                    </view>
+                  </navigator>
+                  </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 10154}}">
+                  <block wx:for="{{recommended}}" wx:key="item.id">
+                    <navigator url="../detail/detail?title={{item.TypeName}}">
+                    <view class="content-item">
+                      <image src="{{item.Logo}}"></image>
+                      <text class="content-item-text">{{item.TypeName}}</text>
+                    </view>
+                  </navigator>
+                  </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 10378}}">
+                  <block wx:for="{{recommended}}" wx:key="item.id">
+                    <navigator url="../detail/detail?title={{item.TypeName}}">
+                    <view class="content-item">
+                      <image src="{{item.Logo}}"></image>
+                      <text class="content-item-text">{{item.TypeName}}</text>
+                    </view>
+                  </navigator>
+                  </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 10149}}">
+                  <block wx:for="{{recommended}}" wx:key="item.id">
+                    <navigator url="../detail/detail?title={{item.TypeName}}">
+                    <view class="content-item">
+                      <image src="{{item.Logo}}"></image>
+                      <text class="content-item-text">{{item.TypeName}}</text>
+                    </view>
+                  </navigator>
+                  </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,58 @@
+/* pages/home/home.wxss */
+page{
+  height: 100%;
+}
+.content .swiper-f{
+  width: 100%;
+  height: 0;
+  padding-top:50%; 
+  position: relative;
+}
+swiper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.content swiper-item image{
+  height:100%;
+}
+.placeholder{
+  margin: 5px;
+  padding: 0 10px;
+  text-align: center;
+  background-color: #EBEBEB;
+  height: 2.3em;
+  line-height: 2.3em;
+  position: relative;
+}
+.placeholder image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.placeholder .span{
+  position: absolute;
+  top: 30rpx;
+  left: 38rpx;
+  font-size: 25rpx;
+}
+.weui-tab__content{
+  float: left;
+}
+.content-item{
+  display: inline-block;
+  width: 35%;
+  padding: 10px 22px;
+}
+image{
+  width: 100%;
+  height: 250rpx;
+}
+.name{
+  font-size: 13px;
+  color: rgba(148, 146, 146, 0.8);
+}
+.price{
+  color: red;
+}

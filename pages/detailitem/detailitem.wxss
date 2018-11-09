@@ -1,0 +1,72 @@
+/* pages/detailitem/detailitem.wxss */
+@import '../../libs/icon.wxss';
+page{
+  height: 100%;
+}
+.content-list{
+  height: 100%;
+}
+.content{
+  padding: 15px;
+}
+.content image{
+  width: 100%;
+}
+.content .tdesc{
+  padding: 2px;
+  font-size: 40rpx;
+  line-height: 40rpx;
+}
+.td-text {
+  color: #4c4c4c;
+  word-wrap: break-word;
+}
+.prices{
+  font-size: 60rpx;
+}
+.prices text{
+  color: red;
+}
+.content-bottom{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;                 
+  bottom: 0;
+  z-index: 999;
+}
+.content-bottom view{
+  width: 50%;
+  text-align: center;
+  border: 1px solid #cccccc;
+}
+.content-bottom i{
+  font-size: 30px;
+}
+.content-bottom .icons{
+  color: #666666;
+  border-radius: 5px;
+  background-color: #CCCCCC;
+  position: relative;
+  text-align: center;
+}
+.content-bottom .icons .sum{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #fff;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 120rpx;
+  border-radius: 50%;
+}
+.content-bottom .btns{
+  border-radius: 5px;
+}
+.content-bottom .btn{
+  color: #fff;
+  height: 100%;
+  background-color: red;
+}
